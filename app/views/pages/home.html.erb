@@ -1,5 +1,3 @@
-<p><span data-controller="typed-js"></span></p>
-
 <div class="container">
   <div class="card-trip">
     <div id="carouselExampleControls-1" class="carousel slide" data-bs-ride="carousel">
@@ -28,37 +26,7 @@
           <p>Sport Equipment Decscription</p>
         </div>
         <h2 class="card-trip-pricing">$0.00</h2>
-    </div>
-  </div>
-</div>
-
-  <div class="card-trip">
-    <div id="carouselExampleControls-2" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-        <img src="https://via.placeholder.com/200" class="d-block w-100" alt="1">
-      </div>
-        <div class="carousel-item">
-        <img src="https://via.placeholder.com/200" class="d-block w-100" alt="2">
-        </div>
-      <div class="carousel-item">
-        <img src="https://via.placeholder.com/200" class="d-block w-100" alt="3">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls-2" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls-2" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-      <div class="card-trip-infos">
-        <div>
-          <h2>Sport Equipment For Hire</h2>
-          <p>Sport Equipment Decscription</p>
-        </div>
-      <h2 class="card-trip-pricing">$0.00</h2>
+        <%= link_to "Book", equipment_path(:id)%>
     </div>
   </div>
 </div>
