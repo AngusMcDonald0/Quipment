@@ -13,4 +13,8 @@ class EquipmentPolicy < ApplicationPolicy
   def create?
     true
   end
+
+  def edit?
+    user == record.user
+  end
 end

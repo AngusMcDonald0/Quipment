@@ -26,6 +26,24 @@ class EquipmentsController < ApplicationController
     end
   end
 
+  def edit
+    @equipment = Equipment.find(params[:id])
+    authorize @equipment
+  end
+
+  def update
+    if @equipment.update(equipment_params)
+      redirect_to equipment_path(@equipment)
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @equipment.destroy
+    redirect_to equipment_path(@equipment)
+  end
+
   private
 
   def equipment_params
