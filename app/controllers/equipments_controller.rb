@@ -23,6 +23,6 @@ class EquipmentsController < ApplicationController
   private
 
   def list_params
-    params.require(:equipment).permit(:name, :description, :location)
+    params.require(:equipment).permit(:name, :description, :location, :photo)
   end
 end
