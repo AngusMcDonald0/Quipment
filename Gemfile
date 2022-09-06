@@ -62,6 +62,9 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem "dotenv-rails"
 
+# authorization gem
+gem "pundit"
+
 end
 
 group :development do
