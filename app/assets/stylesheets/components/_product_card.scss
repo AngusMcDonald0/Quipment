@@ -7,7 +7,7 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  width: 350px;
+  width: 300px;
   border-radius: 5px;
   margin: 10px;
   transition: 0.5s;
@@ -17,7 +17,7 @@
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
 }
 
-.card-trip>img {
+.carousel-item>img {
   height: 200px;
   width: 100%;
   object-fit: cover;
