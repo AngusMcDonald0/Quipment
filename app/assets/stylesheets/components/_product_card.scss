@@ -1,15 +1,20 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .card-trip {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   width: 350px;
   border-radius: 5px;
-  margin: 5px;
+  margin: 10px;
   transition: 0.5s;
 }
 
 .card-trip:hover {
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
 }
 
 .card-trip>img {
