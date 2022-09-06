@@ -4,6 +4,7 @@ class EquipmentPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
+  end
 
     def show?
       true
@@ -12,5 +13,4 @@ class EquipmentPolicy < ApplicationPolicy
     def create?
       true
     end
-  end
 end

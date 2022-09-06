@@ -26,7 +26,7 @@ class EquipmentsController < ApplicationController
 
   private
 
-  def list_params
+  def equipment_params
     params.require(:equipment).permit(:name, :description, :location, :photo)
   end
 end
