@@ -4,13 +4,17 @@ class EquipmentPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
+  end
 
-    def show?
-      true
-    end
+  def show?
+    true
+  end
 
-    def create?
-      true
-    end
+  def create?
+    true
+  end
+
+  def edit?
+    user == record.user
   end
 end
