@@ -1,7 +1,6 @@
-
 .navbar-lewagon {
   justify-content: space-between;
-  background-color: transparent;
+  background-color: white;
   transition: 0.5s background-color ease;
 }
 
@@ -9,10 +8,11 @@
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
 
 .navbar-white {
   background-color: white;
+}
+
+.logo {
+  height: 50px;
 }
