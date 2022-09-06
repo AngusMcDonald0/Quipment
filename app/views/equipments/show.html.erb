@@ -1,4 +1,4 @@
-  <div class="card-trip">
+<div class="card-trip">
     <div id="carouselExampleControls-1" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -21,9 +21,9 @@
     </button>
       <div class="card-trip-infos">
         <div>
-          <h2>Sport Equipment For Hire</h2>
-          <%= equipment.name %>
-          <p>Sport Equipment Decscription</p>
+
+          <h2><%= @equipment.name%></h2>
+          <p><%= @equipment.description%></p>
         </div>
         <h2 class="card-trip-pricing">$0.00</h2>
         <%= link_to "Book", equipment_path(:id)%>

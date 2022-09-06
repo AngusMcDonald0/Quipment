@@ -31,6 +31,11 @@ gem "jbuilder"
 # Cloudinary gem, pics related
 gem "cloudinary"
 
+gem "devise"
+
+#simple form
+gem "simple_form", github: "heartcombo/simple_form"
+
 # .env to store cloudinary key
 gem "dotenv-rails", groups: [:development, :test]
 # Use Redis adapter to run Action Cable in production
