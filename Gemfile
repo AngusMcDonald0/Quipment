@@ -62,8 +62,6 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem "dotenv-rails"
 
-# authorization gem
-gem "pundit"
 
 end
 
@@ -84,3 +82,9 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+# devise gem
+gem 'devise'
+
+# authorization gem
+gem "pundit"
