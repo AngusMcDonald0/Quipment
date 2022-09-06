@@ -31,8 +31,6 @@ gem "jbuilder"
 # Cloudinary gem, pics related
 gem "cloudinary"
 
-gem "devise"
-
 #simple form
 gem "simple_form", github: "heartcombo/simple_form"
 
@@ -61,7 +59,6 @@ gem "sassc-rails"
 
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
-gem "simple_form", github: "heartcombo/simple_form"
 
 # Bomb ass seeds
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
