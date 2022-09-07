@@ -1,7 +1,7 @@
 <div class="index-container">
   <% @equipments.each do |equipment| %>
     <%= link_to equipment_path(equipment), class: "card-trip" do %>
-      <img src="https://via.placeholder.com/200"/>
+        <%= cl_image_tag equipment.photos.first.key, class: "d-block w-100", alt: equipment.name %>
       <div class="card-trip-infos">
         <div>
           <h2><%= equipment.name%></h2>
