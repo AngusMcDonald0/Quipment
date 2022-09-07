@@ -27,15 +27,29 @@ tony = User.create!(
 users = [james, angus, chris, tony]
 categories = ["Outdoor", "Indoor", "Water", "Moutain", "Snow", "Fire"]
 locations = ["Melbourne", "Richmond", "South Yarra", "Kew", "Saint Kilda", "Torquay"]
+sport = ["Boxing Gloves", "Snowboard", "Football", "soccerball"]
 
-40.times do
+equipment = Equipment.create!(
+  name: sport.sample,
+  description: Faker::Quote.famous_last_words,
+  category: categories.sample,
+  location: locations.sample,
+  user: users.sample
+)
+
+file = URI.open("https://source.unsplash.com/1300x900/?#{equipment.name}")
+equipment.photos.attach(io: file, filename: equipment.name)
+puts "#{equipment.name} seeded"
+
+5.times do |index|
   equipment = Equipment.create!(
-    name: Faker::Name.first_name,
+    name: sport.sample,
     description: Faker::Quote.famous_last_words,
     category: categories.sample,
     location: locations.sample,
     user: users.sample
   )
-
+  file = URI.open("https://source.unsplash.com/1300x900/?#{equipment.name}")
+  equipment.photos.attach(io: file, filename: equipment.name)
   puts "#{equipment.name} seeded"
 end
