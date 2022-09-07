@@ -10,10 +10,10 @@
   flex-grow: 0;
 }
 
-.navbar-lewagon img {
+/* .navbar-lewagon img {
   width: 100px;
   height: 50px;
-}
+} */
 
 .navbar-white {
   background-color: white;
@@ -34,7 +34,7 @@ body {
   // background-color: rgba(250, 250, 250)
 }
 
-.container {
+.home-container {
   min-height: 100vh;
   justify-content: center;
   align-items: center;
@@ -79,8 +79,8 @@ button {
   border: 1px solid rgba(104, 85, 224, 1);
 }
 
-button:hover {
-  color: white;
-  box-shadow: 0 0 20px#3399ff;
-  background-color: rgba(104, 85, 224, 1);
-}
+// button:hover {
+//   color: white;
+//   box-shadow: 0 0 20px#3399ff;
+//   background-color: rgba(104, 85, 224, 1);
+// }

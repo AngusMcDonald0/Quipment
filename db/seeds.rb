@@ -47,7 +47,8 @@ puts "#{equipment.name} seeded"
     description: Faker::Quote.famous_last_words,
     category: categories.sample,
     location: locations.sample,
-    user: users.sample
+    user: users.sample,
+    price: rand(5..50)
   )
   file = URI.open("https://source.unsplash.com/1300x900/?#{equipment.name}")
   equipment.photos.attach(io: file, filename: equipment.name)
