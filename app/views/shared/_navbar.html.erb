@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top" data-controller="navbar" data-action="scroll@window->navbar#updateNavbar">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "quipment", class: "quipment-logo" %>
     <% end %>
     <%# <p><span data-controller="typed-js"></span></p> %>
@@ -13,9 +13,12 @@
 
       <ul class="navbar-nav me-auto">
           <% if user_signed_in? %>
-            <!-- <li class="nav-item active">
+            <li class="nav-item active">
               <%= link_to "List Your Equipment", new_equipment_path, class:"nav-link" %>
-            </li> -->
+            </li>
+            <li class="nav-item active">
+              <%= link_to "All equipments", equipments_path, class:"nav-link" %>
+            </li>
             <li class="nav-item dropdown">
               <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">

@@ -31,7 +31,9 @@
     <%# <img src="quipmentball.png" class="logo" alt="Travelling"> %>
     <h1 class="title">Making Your<br><span class="stroke">Equipment</span> Needs Easy</h1>
     <span class="icons flex">
-    <a href="#" class="shape flex" title="Get Started"><i class="fa" id="get-started">Get Started</i></a></span>
+    <%= link_to equipments_path, class: "shape flex" do %>
+      <i class="fa" id="get-started">Get Started</i>
+    <% end %>
   </article>
 </main>
 

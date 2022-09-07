@@ -212,11 +212,11 @@ input, textarea, select, select:-moz-placeholder, select::-webkit-input-placehol
   transform: rotate(0deg) translate(0px, 0px);
 }
 
-.active{
-  background-color:var(--primary) !important;
-  border:1px solid var(--primary) !important;
-  pointer-events:none;
-}
+// .active{
+//   background-color:var(--primary) !important;
+//   border:1px solid var(--primary) !important;
+//   pointer-events:none;
+// }
 
 .balllogo{
   width:80px;
