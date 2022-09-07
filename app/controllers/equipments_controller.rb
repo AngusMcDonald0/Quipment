@@ -20,7 +20,7 @@ class EquipmentsController < ApplicationController
     @equipment.user = current_user
     authorize @equipment
     if @equipment.save
-      redirect_to equipment_path(@equipment)
+      redirect_to equipment_path(@equipment), alert: "You successfully listed an equipment!"
     else
       render :new, status: :unprocessable_entity
     end
