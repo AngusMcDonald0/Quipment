@@ -47,6 +47,6 @@ class EquipmentsController < ApplicationController
   private
 
   def equipment_params
-    params.require(:equipment).permit(:name, :description, :location, photos: [])
+    params.require(:equipment).permit(:name, :description, :location, :price, photos: [])
   end
 end
