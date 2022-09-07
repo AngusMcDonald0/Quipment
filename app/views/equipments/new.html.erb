@@ -1,10 +1,14 @@
 <div class="container">
-  <%= simple_form_for(@equipment, url: equipments_path) do |f| %>
-    <%= f.input :name %>
-    <%= f.input :description %>
-    <%= f.input :category %>
-    <%= f.input :location %>
-    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-    <%= f.submit %>
-  <% end %>
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <%= simple_form_for(@equipment, url: equipments_path) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :description %>
+        <%= f.input :category %>
+        <%= f.input :location %>
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
 </div>
