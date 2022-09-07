@@ -5,8 +5,9 @@
         <%= simple_form_for(@equipment, url: equipments_path) do |f| %>
           <%= f.input :name %>
           <%= f.input :description %>
-          <%= f.input :category %>
+          <%= f.input :category, :collection => %w[Outdoor Indoor Water Moutain Snow Fire] %>
           <%= f.input :location %>
+          <%= f.input :price %>
           <%= f.input :photos, as: :file, input_html: { multiple: true } %>
           <%= f.submit class: "btn btn-primary w-100"  %>
           <div class="alert alert-success" role="alert">
