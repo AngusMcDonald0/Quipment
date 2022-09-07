@@ -1,7 +1,8 @@
-.container {
+.index-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+
 
 .card-trip {
   overflow: hidden;
@@ -10,14 +11,17 @@
   width: 300px;
   border-radius: 5px;
   margin: 10px;
-  transition: 0.5s;
+  transition: 0.85s;
+  color: black;
+  text-decoration: none;
 }
 
 .card-trip:hover {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+  color: inherit;
 }
 
-.carousel-item>img {
+.card-trip>img {
   height: 200px;
   width: 100%;
   object-fit: cover;
