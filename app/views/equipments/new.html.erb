@@ -4,7 +4,7 @@
     <%= f.input :description %>
     <%= f.input :category %>
     <%= f.input :location %>
-    <%#=f.input :photo, as: :file  %>
+    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
     <%= f.submit %>
   <% end %>
 </div>
