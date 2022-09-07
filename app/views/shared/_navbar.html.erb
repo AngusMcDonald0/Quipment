@@ -1,34 +1,32 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top" data-controller="navbar" data-action="scroll@window->navbar#updateNavbar">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-    <h1>Quipments</h1>
-    <%# <%= image_tag "quipment.png", class: "logo"%>
-    </a>
+    <%= link_to "#", class: "navbar-brand" do %>
+      <%= image_tag "quipment", class: "quipment-logo" %>
+    <% end %>
+    <%# <p><span data-controller="typed-js"></span></p> %>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
       <ul class="navbar-nav me-auto">
-          <li class="nav-item active">
-               <%= link_to "List Your Equipment", new_equipment_path, class:"nav-link" %>
-          </li>
-               <li class="nav-item active">
-               <%= link_to "Home Page", equipments_path, class:"nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%# <a class="nav-link" href="#">Messages</a> %>
-          </li>
-          <%# <li class="nav-item dropdown">
-            <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">List Equip</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
-            </div>
-          </li> %>
-          <!--li class="nav-item"-->
-          <!--/li-->
+          <% if user_signed_in? %>
+            <!-- <li class="nav-item active">
+              <%= link_to "List Your Equipment", new_equipment_path, class:"nav-link" %>
+            </li> -->
+            <li class="nav-item dropdown">
+              <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">List Equip</a>
+                <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
+              </div>
+            </li>
+          <% else %>
+            <%# <button class="reg" id="signup">Sign up</button> %>
+            <%= link_to "Login", new_user_session_path, class: "nav-link log" %>
+          <% end %>
       </ul>
     </div>
   </div>

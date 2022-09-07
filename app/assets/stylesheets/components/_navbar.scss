@@ -1,9 +1,9 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background-color: white;
+  background-color: transparent;
   transition: 0.5s background-color ease;
-  height: 50px;
-  padding-top: 5px;
+  height: 55px;
+  padding-top: 15px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -21,4 +21,66 @@
 
 H1 {
   font-size: 15px;
+}
+
+.quipment-logo{
+  width: 180px;
+}
+body {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  // background-color: rgba(250, 250, 250)
+}
+
+.container {
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+
+.container div > p span {
+  color: red;
+}
+
+p {
+  position: relative;
+  top: 30px;
+}
+
+p a {
+  color: black;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+  font-weight: 600;
+  margin: 0 10px;
+  width: 200px;
+  padding: 10px 0;
+  box-shadow: 0 0 20px rgba(104, 85, 224, 0.2);
+  transition: 0.4s;
+}
+
+.reg {
+  color: white;
+  background-color: rgba(104, 85, 224, 1);
+}
+
+.log {
+  color: rgb(104, 85, 224);
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(104, 85, 224, 1);
+}
+
+button:hover {
+  color: white;
+  box-shadow: 0 0 20px#3399ff;
+  background-color: rgba(104, 85, 224, 1);
 }

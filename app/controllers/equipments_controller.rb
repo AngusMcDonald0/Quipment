@@ -20,7 +20,7 @@ class EquipmentsController < ApplicationController
     @equipment.user = current_user
     authorize @equipment
     if @equipment.save
-      redirect_to equipment_path(@equipment)
+      redirect_to equipment_path(@equipment), alert: "You successfully listed an equipment!"
     else
       render :new, status: :unprocessable_entity
     end
@@ -47,6 +47,6 @@ class EquipmentsController < ApplicationController
   private
 
   def equipment_params
-    params.require(:equipment).permit(:name, :description, :location, photos: [])
+    params.require(:equipment).permit(:name, :description, :location, :price, photos: [])
   end
 end

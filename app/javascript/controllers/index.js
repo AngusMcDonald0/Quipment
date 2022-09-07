@@ -9,6 +9,9 @@ application.register("hello", HelloController)
 
 import NavbarController from "./navbar_controller"
 import TypedJsController from "./typed_js_controller"
+import Home from "./home"
+
 
 application.register("navbar", NavbarController)
 application.register("typed-js", TypedJsController)
+application.register("home", Home)

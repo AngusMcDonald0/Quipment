@@ -1,14 +1,18 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-6">
-      <%= simple_form_for(@equipment, url: equipments_path) do |f| %>
-        <%= f.input :name %>
-        <%= f.input :description %>
-        <%= f.input :category %>
-        <%= f.input :location %>
-        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-        <%= f.submit %>
-      <% end %>
+<div class="listings_bg_image d-flex align-items-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-6 new_equipment_form">
+        <%= simple_form_for(@equipment, url: equipments_path) do |f| %>
+          <%= f.input :name %>
+          <%= f.input :description %>
+          <%= f.input :category, :collection => %w[Outdoor Indoor Water Moutain Snow Fire] %>
+          <%= f.input :location %>
+          <%= f.input :price %>
+          <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+          <%= f.submit class: "btn btn-primary w-100"  %>
+          <div class="alert alert-success" role="alert">
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
