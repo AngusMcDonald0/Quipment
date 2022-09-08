@@ -14,24 +14,23 @@
       <ul class="navbar-nav me-auto">
           <% if user_signed_in? %>
             <li class="nav-item active">
-              <%= link_to "List Your Equipment", new_equipment_path, class:"nav-link" %>
+              <%= link_to "List Your Equipment", new_equipment_path, class:"btn" %>
             </li>
             <li class="nav-item active">
-              <%= link_to "All equipments", equipments_path, class:"nav-link" %>
+              <%= link_to "All equipments", equipments_path, class:"btn" %>
             </li>
             <li class="nav-item active">
-              <%= link_to "Dashboard", dashboard_path, class:"nav-link" %>
+              <%= link_to "Dashboard", dashboard_path, class:"btn" %>
             </li>
             <li class="nav-item dropdown">
-              <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
+              <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://media.istockphoto.com/vectors/missing-image-of-a-person-placeholder-vector-id1288129985?k=20&m=1288129985&s=612x612&w=0&h=OHfZHfKj0oqIDMl5f_oRqH13MHiB63nUmySYILbWbjE=" />
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">List Equip</a>
-                <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
+                <%= button_to "logout", destroy_user_session_path, method: :delete  %>
               </div>
             </li>
           <% else %>
             <%# <button class="reg" id="signup">Sign up</button> %>
-            <%= link_to "Login", new_user_session_path, class: "nav-link log" %>
+            <%= link_to "Login", new_user_session_path, class: "btn btn-primary" %>
           <% end %>
       </ul>
     </div>
