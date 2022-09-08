@@ -13,6 +13,9 @@
 
       <ul class="navbar-nav me-auto">
           <% if user_signed_in? %>
+            <li class= "fa fa-dashboard" style="font-size:24px">
+              <%= link_to "", equipments_path, class:"nav-link dashboard-fix" %>
+            </li>
             <li class="nav-item active">
               <%= link_to "List Your Equipment", new_equipment_path, class:"btn" %>
             </li>
