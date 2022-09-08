@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   get "components", to: "pages#components"
+  get "dashboard", to: "pages#dashboard"
 end
