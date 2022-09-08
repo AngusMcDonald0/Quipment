@@ -12,7 +12,7 @@
 <body>
 
 <!--NAV-->
-<nav>
+<%# <nav>
   <a href="javascript:{}" class="flex menu" onclick="nav()"><img src="https://i.postimg.cc/Vv7xdSY0/00.png" alt=""></a>
   <a href="#" class="flex active"><img src="https://i.postimg.cc/nLBf0c1N/01.png" alt=""><sub class="info">Home</sub></a>
   <a href="#" class="flex"><img src="https://i.postimg.cc/SN14KPs1/02.png" alt=""><sub class="info">Recent Places</sub></a>
@@ -20,16 +20,16 @@
   <a href="#" class="flex"><img src="https://i.postimg.cc/Xq7MjK00/04.png" alt=""><sub class="info">Blog</sub></a>
   <a href="#" class="flex"><img src="https://i.postimg.cc/sXJdC6qc/05.png" alt=""><sub class="info">Contact Us</sub></a>
   <a href="#" class="flex"><img src="https://i.postimg.cc/DZhkDkj0/06.png" alt=""><sub class="info">About Us</sub></a>
-</nav>
+</nav> %>
 
 
 
 <!--MAIN-->
 <main class="flex">
   <article class="padding_5x">
-    <%= image_tag "quipmentball.png", class: "balllogo" %>
+    <%# <%= image_tag "quipmentball.png", class: "balllogo" %>
     <%# <img src="quipmentball.png" class="logo" alt="Travelling"> %>
-    <h1 class="title">Making Your<br><span class="stroke">Equipment</span> Needs Easy</h1>
+    <h1 data-controller ="typed-js"> class="title">Making Your<br><span class="stroke">Equipment</span> Needs Easy</h1>
     <span class="icons flex">
     <%= link_to equipments_path, class: "shape flex" do %>
       <i class="fa" id="get-started">Get Started</i>
@@ -40,7 +40,7 @@
 
 <!--SECTIONS-->
 <!--SECTION1-->
-<div class="section1">
+<%# <div class="section1">
   <section>
     <form class="flex padding_1x">
     <input type="text" name="where_to" id="where_to" placeholder="What equipment?" maxlength="50" required="" class="padding_1x flex-content">
@@ -51,7 +51,7 @@
     <option value="">Greece</option>
     <option value="">Green Land</option>
     <option value="">Sri Lanka</option>
-    <option value="">Thai Land</option>
+    <option value="">Thailand</option>
     </select>
     <select name="duration" id="duration" class="padding_1x flex-content">
     <option value="">Duration</option>
@@ -65,7 +65,7 @@
     <button class="padding_1x flex-content btn1" class="flex-content">Show Me!</button>
     </form>
   </section>
-  </div>
+  </div> %>
 
 
 
