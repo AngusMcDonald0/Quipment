@@ -1,7 +1,7 @@
 <div class="listings_bg_image d-flex align-items-center">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-6 new_equipment_form">
+      <div class="col-6">
         <%= simple_form_for(@equipment, url: equipments_path) do |f| %>
           <%= f.input :name %>
           <%= f.input :description %>
@@ -9,8 +9,7 @@
           <%= f.input :location %>
           <%= f.input :price %>
           <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-          <%= f.submit class: "btn btn-primary w-100"  %>
-          <div class="alert alert-success" role="alert">
+          <%= f.submit class: "submit-btn"%>
         <% end %>
       </div>
     </div>
