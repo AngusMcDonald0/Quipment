@@ -1,16 +1,16 @@
 <div class="index-container">
-  <% @equipments.each do |equipment| %>
-    <%= link_to equipment_path(equipment), class: "card-trip" do %>
-        <%= cl_image_tag equipment.photos.first.key, class: "d-block w-100", alt: equipment.name %>
-      <div class="card-trip-infos">
-        <div>
-          <h2><%= equipment.name%></h2>
-          <p><%= equipment.description%></p>
-        </div>
-        <h2 class="card-trip-pricing">$<%= equipment.price %></h2>
-      </div>
-    <% end %>
-  <% end %>
+      <% @equipments.each do |equipment| %>
+        <%= link_to equipment_path(equipment), class: "card-trip" do %>
+            <%= cl_image_tag equipment.photos.first.key, class: "d-block w-100", alt: equipment.name %>
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= equipment.name.capitalize%></h2>
+              <p><%= equipment.description%></p>
+            </div>
+            <h2 class="card-trip-pricing">$<%= equipment.price %></h2>
+          </div>
+        <% end %>
+      <% end %>
 </div>
 
 

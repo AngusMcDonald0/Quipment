@@ -4,14 +4,14 @@
 
 import { application } from "./application"
 
+import Flatpickr from 'stimulus-flatpickr'
+application.register('flatpickr', Flatpickr)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
 import NavbarController from "./navbar_controller"
-import TypedJsController from "./typed_js_controller"
-import Home from "./home"
-
-
 application.register("navbar", NavbarController)
+
+import TypedJsController from "./typed_js_controller"
 application.register("typed-js", TypedJsController)
-application.register("home", Home)

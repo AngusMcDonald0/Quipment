@@ -5,15 +5,25 @@ class BookingsController < ApplicationController
     @equipment = Equipment.find(params[:equipment_id])
   end
 
+  def update
+    @booking = Booking.find(params[:id])
+    if params[:decision] == "accept"
+      @booking.accepted!
+    else
+      @booking.rejected!
+    end
+    redirect_to dashboard_path
+  end
+
   def create
     @booking = Booking.new(booking_params)
     @equipment = Equipment.find(params[:equipment_id])
     @booking.equipment = @equipment
     @booking.user = current_user
     if @booking.save
-      redirect_to equipment_path(@booking)
+      redirect_to equipment_path(@equipment), notice: "Booking request made"
     else
-      render :new, status: :unprocessable_entity
+      render "equipments/show", status: :unprocessable_entity
     end
   end
 
