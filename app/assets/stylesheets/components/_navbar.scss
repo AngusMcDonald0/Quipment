@@ -79,8 +79,24 @@ button {
   border: 1px solid rgba(104, 85, 224, 1);
 }
 
+.fa-dashboard {
+  margin-top: 4px;
+  margin-right: 12px;
+  color: white;
+}
+
+.fa-dashboard:hover {
+  color: black;
+}
 // button:hover {
 //   color: white;
 //   box-shadow: 0 0 20px#3399ff;
 //   background-color: rgba(104, 85, 224, 1);
 // }
+
+.dashboard-fix {
+  top: -100%;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
