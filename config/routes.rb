@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :equipments do
     resources :bookings, only: %i[new create]
   end
+  resources :bookings, only: %i[update]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

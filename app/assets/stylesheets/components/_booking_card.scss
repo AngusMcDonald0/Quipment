@@ -1,0 +1,21 @@
+.booking-card {
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.1);
+
+  a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.bg-pending {
+  background-color: $primary;
+}
+
+.bg-accepted {
+  background-color: $success;
+}
+
+.bg-rejected {
+  background-color: $danger;
+}

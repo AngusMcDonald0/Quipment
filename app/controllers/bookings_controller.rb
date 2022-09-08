@@ -5,6 +5,16 @@ class BookingsController < ApplicationController
     @equipment = Equipment.find(params[:equipment_id])
   end
 
+  def update
+    @booking = Booking.find(params[:id])
+    if params[:decision] == "accept"
+      @booking.accepted!
+    else
+      @booking.rejected!
+    end
+    redirect_to dashboard_path
+  end
+
   def create
     @booking = Booking.new(booking_params)
     @equipment = Equipment.find(params[:equipment_id])

@@ -21,8 +21,56 @@
       </div>
     </div>
 
-    <div class="col-6 d-flex justify-content-center">
-      <h2>My Bookings</h2>
+    <div class="col-6">
+      <div class="d-flex justify-content-center">
+        <h2>Pending bookings for my equipment</h2>
+      </div>
+      <div class="dashboard-container pt-3">
+        <% @equipments.each do |equipment| %>
+          <% @all_bookings.each do |booking| %>
+            <% if booking.equipment == equipment %>
+
+              <div class="bg-white booking-card">
+
+                <%= booking.equipment.name.capitalize %><br>Booked from: <%= booking.start_date.strftime("%b. %d") %> - <%= booking.end_date.strftime("%b. %d") %><br>
+                Status: <div class="badge bg-<%= booking.status %>"><%= booking.status %></div>
+                <br><br>
+
+                <div class="d-flex justify-content-around">
+                  <%= link_to booking_path(booking, decision: "accept"), data: { turbo_method: :patch }, class: "border rounded w-100 text-center mx-2 py-2 border-light" do %>
+                    <i class="fa-solid fa-check text-success fs-4"></i>
+                  <% end %>
+
+                  <%= link_to booking_path(booking, decision: "reject"), data: { turbo_method: :patch }, class: "border rounded w-100 text-center mx-2 py-2 border-light" do %>
+                    <i class="fa-solid fa-x text-danger fs-4"></i>
+                  <% end %>
+                </div>
+
+              </div>
+
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <div class="d-flex justify-content-center pt-5">
+        <h2>My Bookings</h2>
+      </div>
+      <div class="dashboard-container pt-3">
+        <% @bookings.each do |booking| %>
+          <%= link_to equipment_path(booking.equipment), class: "card-trip" do %>
+            <%= cl_image_tag booking.equipment.photos.first.key, class: "d-block w-100", alt: booking.equipment.name %>
+            <div class="card-trip-infos">
+              <h2><%= booking.equipment.name.capitalize%></h2>
+              <p>Booked from: <%= booking.start_date %> to <%= booking.end_date %></p>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
