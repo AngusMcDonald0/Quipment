@@ -2,16 +2,13 @@
 
   <div class="show-wrapper">
 
-    <%= link_to equipments_path, class: "back-container" do %>
-      <i class="fa-solid fa-arrow-left"></i>
-      <p>Back to equipments</p>
-    <% end %>
 
-    <div class="card-product">
-    <div class="row">
-
-    </div>
-      <div class="row">
+    <div class="card-product w-100">
+      <%= link_to equipments_path, class: "back-container" do %>
+        <i class="fa-solid fa-arrow-left"></i>
+        <p>Back to equipments</p>
+      <% end %>
+      <div class="row w-100">
         <div class="col-6 p-0">
           <div class="show_photo" style="height: 500px; width: 100%;">
             <div id="carouselExampleIndicators" class="carousel slide d-flex" data-bs-ride="carousel" style="height: 100%">
@@ -22,7 +19,7 @@
               </div>
               <div class="carousel-inner ">
                 <% @equipment.photos.each_with_index do |photo, index| %>
-                  <div class="w-100 carousel-item<%= index == 0 ? " active" : "" %>">
+                  <div class="w-100 h-100 carousel-item<%= index == 0 ? " active" : "" %>">
                     <%= cl_image_tag photo.key, class: "d-block w-100 h-100", alt: index + 1 %>
                   </div>
                 <% end %>
@@ -43,37 +40,30 @@
             <h2><%=@equipment.name.capitalize%></h2>
             <h1>$<%=@equipment.price%></h1>
             <p><%= @equipment.description %></p>
-            <div class="d-flex justify-content-center">
-  <% if policy(@equipment).edit? %>
-    <div class="container">
-      <div class="d-flex justify-content-center">
-        <button><%= link_to "Edit", equipment_path(@equipment), class:"card-product-infos button" %></button>
-        <button><%= link_to "Delete", equipment_path(@equipment), class:"card-product-infos button" %></button>
-      <%else%>
-        <div class="container">
-          <h3>Book</h3>
-        <%= simple_form_for [@equipment, @booking] do |f| %>
-        <%= f.text_field :start_date, placeholder: "Start Date", data: { controller: "flatpickr" } %>
-        <br>
-        <br>
-        <%= f.text_field :end_date, placeholder:"End Date", data: { controller: "flatpickr" } %>
-        <br>
-        <br>
-        <%= f.submit %>
-      </div>
-    </div>
-    <% end %>
-          <% end %>
-  </div>
-              <%# <button>Rent Now</button>
-              <button>Enquire</button> %>
+            <div class="container">
+              <div class="d-flex justify-content-center">
+                <% if policy(@equipment).edit? %>
+                  <button><%= link_to "Edit", equipment_path(@equipment), class:"card-product-infos button" %></button>
+                  <button><%= link_to "Delete", equipment_path(@equipment), class:"card-product-infos button" %></button>
+                <% end %>
+
+                <div class="container">
+                  <h3>Book</h3>
+                  <%= simple_form_for [@equipment, @booking] do |f| %>
+                    <%= f.text_field :start_date, placeholder: "Start Date", data: { controller: "flatpickr" } %>
+                    <br>
+                    <br>
+                    <%= f.text_field :end_date, placeholder:"End Date", data: { controller: "flatpickr" } %>
+                    <br>
+                    <br>
+                    <%= f.submit %>
+                  <% end %>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
       </div>
-
-
     </div>
   </div>
 </div>
