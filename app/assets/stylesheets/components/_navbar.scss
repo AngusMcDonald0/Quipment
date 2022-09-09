@@ -1,9 +1,10 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background-color: whitesmoke;
+  background-color: white;
   transition: 0.5s background-color ease;
   height: 55px;
   padding-top: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .navbar-lewagon-home {
@@ -36,7 +37,7 @@ H1 {
 }
 
 .quipment-logo {
-  width: 180px;
+  width: 120px;
 }
 
 body {
