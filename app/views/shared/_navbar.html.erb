@@ -14,10 +14,10 @@
       <ul class="navbar-nav me-auto">
           <% if user_signed_in? %>
             <li class="nav-item active">
-              <%= link_to "List Your Equipment", new_equipment_path, class:"btn text-secondary" %>
+              <%= link_to "All Equipments", equipments_path, class:"btn text-secondary" %>
             </li>
             <li class="nav-item active">
-              <%= link_to "All Equipments", equipments_path, class:"btn text-secondary" %>
+              <%= link_to "List Your Equipments", new_equipment_path, class:"btn text-secondary" %>
             </li>
             <li class="nav-item active">
               <%= link_to "Dashboard", dashboard_path, class:"btn text-secondary" %>
