@@ -1,30 +1,22 @@
-<div class="container">
+<div class="container" style="margin-top: 10px;">
   <div class="row">
-    <div class="col-6">
-      <div class="d-flex justify-content-center">
-        <h2>My Equipment</h2>
-      </div>
-      <div class="dashboard-container pt-3">
-        <% @equipments.each do |equipment| %>
-          <%= link_to equipment_path(equipment), class: "card-trip" do %>
-              <%= cl_image_tag equipment.photos.first.key, class: "d-block w-100", alt: equipment.name %>
-            <div class="card-trip-infos">
-              <div>
-                <h2><%= equipment.name.capitalize%></h2>
-                <p><%= equipment.description%></p>
-              </div>
-              <h2 class="card-trip-pricing">$<%= equipment.price %></h2>
-            </div>
-          <% end %>
-        <% end %>
-        <%= link_to "+", new_equipment_path, class: "card-new" %>
-      </div>
-    </div>
+    <ul class="nav nav-pills justify-content-center mb-5">
+      <li class="nav-item">
+        <a class="nav-link active" data-bs-toggle="pill" href="#pending">Bookings for my equipment</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="pill" href="#bookings">My Bookings</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="pill" href="#equipment">My Equipment</a>
+      </li>
+    </ul>
+  </div>
 
-    <div class="col-6">
-      <div class="d-flex justify-content-center">
-        <h2>Pending bookings for my equipment</h2>
-      </div>
+  <div class="tab-content">
+
+
+    <div class="tab-pane container active" id="pending">
       <div class="dashboard-container pt-3">
         <% @equipments.each do |equipment| %>
           <% @all_bookings.each do |booking| %>
@@ -53,24 +45,49 @@
         <% end %>
       </div>
     </div>
-  </div>
 
-  <div class="row justify-content-center">
-    <div class="col-6">
-      <div class="d-flex justify-content-center pt-5">
-        <h2>My Bookings</h2>
+
+    <div class="tab-pane container fade" id="bookings">
+      <div class="row justify-content-center">
+        <div class="col">
+          <div class="dashboard-container pt-3">
+            <% @bookings.each do |booking| %>
+              <%= link_to equipment_path(booking.equipment), class: "dashboard-card" do %>
+                <%= cl_image_tag booking.equipment.photos.first.key, class: "d-block w-100", alt: booking.equipment.name %>
+                <div class="dashboard-card-infos">
+                  <div>
+                    <h2><%= booking.equipment.name.capitalize%></h2>
+                  </div>
+                  <div>
+                    <p>Booked from: <%= booking.start_date %> to <%= booking.end_date %></p>
+                  </div>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
       </div>
+    </div>
+
+
+    <div class="tab-pane container fade" id="equipment">
       <div class="dashboard-container pt-3">
-        <% @bookings.each do |booking| %>
-          <%= link_to equipment_path(booking.equipment), class: "card-trip" do %>
-            <%= cl_image_tag booking.equipment.photos.first.key, class: "d-block w-100", alt: booking.equipment.name %>
+        <% @equipments.each do |equipment| %>
+          <%= link_to equipment_path(equipment), class: "card-trip" do %>
+              <%= cl_image_tag equipment.photos.first.key, class: "d-block w-100", alt: equipment.name %>
             <div class="card-trip-infos">
-              <h2><%= booking.equipment.name.capitalize%></h2>
-              <p>Booked from: <%= booking.start_date %> to <%= booking.end_date %></p>
+              <div>
+                <h2><%= equipment.name.capitalize%></h2>
+                <p><%= equipment.description%></p>
+              </div>
+              <h2 class="card-trip-pricing">$<%= equipment.price %></h2>
             </div>
           <% end %>
         <% end %>
+        <%= link_to "+", new_equipment_path, class: "card-new" %>
       </div>
     </div>
+
+
   </div>
 </div>
