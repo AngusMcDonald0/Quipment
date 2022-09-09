@@ -11,28 +11,13 @@
 </head>
 <body>
 
-<!--NAV-->
-<%# <nav>
-  <a href="javascript:{}" class="flex menu" onclick="nav()"><img src="https://i.postimg.cc/Vv7xdSY0/00.png" alt=""></a>
-  <a href="#" class="flex active"><img src="https://i.postimg.cc/nLBf0c1N/01.png" alt=""><sub class="info">Home</sub></a>
-  <a href="#" class="flex"><img src="https://i.postimg.cc/SN14KPs1/02.png" alt=""><sub class="info">Recent Places</sub></a>
-  <a href="#" class="flex"><img src="https://i.postimg.cc/htHqL7V9/03.png" alt=""><sub class="info">Destination</sub></a>
-  <a href="#" class="flex"><img src="https://i.postimg.cc/Xq7MjK00/04.png" alt=""><sub class="info">Blog</sub></a>
-  <a href="#" class="flex"><img src="https://i.postimg.cc/sXJdC6qc/05.png" alt=""><sub class="info">Contact Us</sub></a>
-  <a href="#" class="flex"><img src="https://i.postimg.cc/DZhkDkj0/06.png" alt=""><sub class="info">About Us</sub></a>
-</nav> %>
-
-
-
 <!--MAIN-->
 <main class="flex">
   <article class="padding_5x">
-    <%# <%= image_tag "quipmentball.png", class: "balllogo" %>
-    <%# <img src="quipmentball.png" class="logo" alt="Travelling"> %>
-    <h1 data-controller ="typed-js"> class="title">Making Your<br><span class="stroke">Equipment</span> Needs Easy</h1>
+    <h1 class="title">Making Your<br><span class="stroke">Equipment</span> Needs Easy</h1>
     <span class="icons flex">
-    <%= link_to equipments_path, class: "shape flex" do %>
-      <i class="fa" id="get-started">Get Started</i>
+    <%= link_to equipments_path do %>
+      <i class="fa btn btn-primary" id="get-started">Get Started</i>
     <% end %>
   </article>
 </main>
@@ -70,7 +55,7 @@
 
 
   <!--SECTION2-->
-  <div class="section2 flex">
+  <%# <div class="section2 flex">
   <section class="flex-content padding_2x">
   <span class="tag inline-photo show-on-scroll">Rent with us</span>
   <h1 class="sub-title">Find your next <em>rental</em></h1>
@@ -142,11 +127,11 @@
   </figure>
   </section>
   </div>
-
+ %>
 
 
   <!--SECTION4-->
-  <div class="section4 flex">
+  <%# <div class="section4 flex">
   <section class="flex-content padding_2x">
   <b class="cursive">Looking to sell?</b>
   <h1 class="sub-title">Join us and<em>start earning today</em></h1>
@@ -173,7 +158,7 @@
   </span>
   </article>
   </section>
-  </div>
+  </div> %>
 
 
 
