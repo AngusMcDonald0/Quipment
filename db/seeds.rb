@@ -54,3 +54,38 @@ puts "#{equipment.name} seeded"
   equipment.photos.attach(io: file, filename: equipment.name)
   puts "#{equipment.name} seeded"
 end
+
+name: "Spalding Basketball",
+description: Faker::Quote.famous_last_words,
+category: categories.sample,
+location: locations.sample,
+user: users.sample,
+price: rand(5..50)
+
+name: "Soccer Ball",
+description: Faker::Quote.famous_last_words,
+category: categories.sample,
+location: locations.sample,
+user: users.sample,
+price: rand(5..50)
+
+name: "Tennis Ball",
+description: ,
+category: categories.sample,
+location: locations.sample,
+user: users.sample,
+price: rand(5..50)
+
+name: "Mikasa Volley Ball",
+description: Faker::Quote.famous_last_words,
+category: categories.sample,
+location: locations.sample,
+user: users.sample,
+price: rand(5..50)
+
+name: "Titleist Golf Ball",
+description: Faker::Quote.famous_last_words,
+category: categories.sample,
+location: locations.sample,
+user: users.sample,
+price: rand(5..50)
