@@ -1,5 +1,6 @@
 Equipment.destroy_all && User.destroy_all if Rails.env.development?
 
+# Creating the users
 james = User.create!(
   email: "james@dickys.com",
   password: "abcdef",
@@ -29,63 +30,138 @@ categories = ["Outdoor", "Indoor", "Water", "Moutain", "Snow", "Fire"]
 locations = ["Melbourne", "Richmond", "South Yarra", "Kew", "Saint Kilda", "Torquay"]
 sport = ["Boxing Gloves", "Snowboard", "Football", "soccerball"]
 
+# SEED CREATE
 equipment = Equipment.create!(
-  name: sport.sample,
-  description: Faker::Quote.famous_last_words,
-  category: categories.sample,
-  location: locations.sample,
-  user: users.sample
+  name: "Spalding Basketball GG7",
+  description: "The best basketball in the world, NBA Standardized. Fully pumped and ready to be played.",
+  category: "Indoor",
+  location: "Melbourne",
+  user: angus,
+  price: "$ 20"
 )
 
+# PHOTO 1
 file = URI.open("https://source.unsplash.com/1300x900/?#{equipment.name}")
 equipment.photos.attach(io: file, filename: equipment.name)
+# PHOTO 2
+file = URI.open("https://source.unsplash.com/1300x900/?#{equipment.name}")
+equipment.photos.attach(io: file, filename: equipment.name)
+# PHOTO 3
+file = URI.open("https://source.unsplash.com/1300x900/?#{equipment.name}")
+equipment.photos.attach(io: file, filename: equipment.name)
+
 puts "#{equipment.name} seeded"
 
-5.times do |index|
-  equipment = Equipment.create!(
-    name: sport.sample,
-    description: Faker::Quote.famous_last_words,
-    category: categories.sample,
-    location: locations.sample,
-    user: users.sample,
-    price: rand(5..50)
-  )
-  file = URI.open("https://source.unsplash.com/1300x900/?#{equipment.name}")
-  equipment.photos.attach(io: file, filename: equipment.name)
-  puts "#{equipment.name} seeded"
-end
+# SEED CREATE
+equipment = Equipment.create!(
+  name: "Mikasa Volleyball",
+  description: "Japanese-based company, producing the world class volleyball around the world. Good condition and ready to be played",
+  category: "Indoor",
+  location: "Geelong",
+  user: james,
+  price: "$ 15"
+)
 
-name: "Spalding Basketball",
-description: Faker::Quote.famous_last_words,
-category: categories.sample,
-location: locations.sample,
-user: users.sample,
-price: rand(5..50)
+# PHOTO 1
+file = URI.open("https://source.unsplash.com/1300x900/?#{equipment.name}")
+equipment.photos.attach(io: file, filename: equipment.name)
+# PHOTO 2
+file = URI.open("https://source.unsplash.com/1300x900/?#{equipment.name}")
+equipment.photos.attach(io: file, filename: equipment.name)
+# PHOTO 3
+file = URI.open("https://source.unsplash.com/1300x900/?#{equipment.name}")
+equipment.photos.attach(io: file, filename: equipment.name)
 
-name: "Soccer Ball",
-description: Faker::Quote.famous_last_words,
-category: categories.sample,
-location: locations.sample,
-user: users.sample,
-price: rand(5..50)
+puts "#{equipment.name} seeded"
 
-name: "Tennis Ball",
-description: ,
-category: categories.sample,
-location: locations.sample,
-user: users.sample,
-price: rand(5..50)
+# SEED CREATE
+equipment = Equipment.create!(
+  name: "Titleist V1 Golf Ball",
+  description: "PGA-graded golf balls. Set of 10.",
+  category: "Indoor Golf",
+  location: "Canberra",
+  user: chris,
+  price: "$ 5"
+)
 
-name: "Mikasa Volley Ball",
-description: Faker::Quote.famous_last_words,
-category: categories.sample,
-location: locations.sample,
-user: users.sample,
-price: rand(5..50)
+# PHOTO 1
+file = URI.open("https://source.unsplash.com/1300x900/?#{equipment.name}")
+equipment.photos.attach(io: file, filename: equipment.name)
+# PHOTO 2
+file = URI.open("https://source.unsplash.com/1300x900/?#{equipment.name}")
+equipment.photos.attach(io: file, filename: equipment.name)
+# PHOTO 3
+file = URI.open("https://source.unsplash.com/1300x900/?#{equipment.name}")
+equipment.photos.attach(io: file, filename: equipment.name)
 
-name: "Titleist Golf Ball",
-description: Faker::Quote.famous_last_words,
-category: categories.sample,
-location: locations.sample,
-user: users.sample,
-price: rand(5..50)
+puts "#{equipment.name} seeded"
+
+# SEED CREATE
+equipment = Equipment.create!(
+  name: "Adidas Glider Soccer Ball",
+  description: "Wanted to rent this hourly, as it is only collecting dust in my garage.",
+  category: "Indoor & Outdoor",
+  location: "Perth",
+  user: james,
+  price: "$ 15"
+)
+
+# PHOTO 1
+file = URI.open("https://source.unsplash.com/1300x900/?#{equipment.name}")
+equipment.photos.attach(io: file, filename: equipment.name)
+# PHOTO 2
+file = URI.open("https://source.unsplash.com/1300x900/?#{equipment.name}")
+equipment.photos.attach(io: file, filename: equipment.name)
+# PHOTO 3
+file = URI.open("https://source.unsplash.com/1300x900/?#{equipment.name}")
+equipment.photos.attach(io: file, filename: equipment.name)
+
+puts "#{equipment.name} seeded"
+
+
+equipment = Equipment.create!(
+  name: "Stiga Table Tennis Ball",
+  description: "Good ping-pong ball in general. In a very good condition.",
+  category: "Indoor",
+  location: "Adelaide",
+  user: james,
+  price: "$ 15"
+)
+
+# PHOTO 1
+file = URI.open("https://source.unsplash.com/1300x900/?#{equipment.name}")
+equipment.photos.attach(io: file, filename: equipment.name)
+# PHOTO 2
+file = URI.open("https://source.unsplash.com/1300x900/?#{equipment.name}")
+equipment.photos.attach(io: file, filename: equipment.name)
+# PHOTO 3
+file = URI.open("https://source.unsplash.com/1300x900/?#{equipment.name}")
+equipment.photos.attach(io: file, filename: equipment.name)
+
+puts "#{equipment.name} seeded"
+## FAKER CODE
+# equipment = Equipment.create!(
+#   name: sport.sample,
+#   description: Faker::Quote.famous_last_words,
+#   category: categories.sample,
+#   location: locations.sample,
+#   user: users.sample
+# )
+
+# file = URI.open("https://source.unsplash.com/1300x900/?#{equipment.name}")
+# equipment.photos.attach(io: file, filename: equipment.name)
+# puts "#{equipment.name} seeded"
+
+# 5.times do |index|
+#   equipment = Equipment.create!(
+#     name: sport.sample,
+#     description: Faker::Quote.famous_last_words,
+#     category: categories.sample,
+#     location: locations.sample,
+#     user: users.sample,
+#     price: rand(5..50)
+#   )
+#   file = URI.open("https://source.unsplash.com/1300x900/?#{equipment.name}")
+#   equipment.photos.attach(io: file, filename: equipment.name)
+#   puts "#{equipment.name} seeded"
+# end
