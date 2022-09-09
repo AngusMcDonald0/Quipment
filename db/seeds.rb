@@ -8,7 +8,7 @@ james = User.create!(
 )
 
 angus = User.create!(
-  email: "angus@test.com",
+  email: "angus1@test.com",
   password: "123456",
   password_confirmation: "123456"
 )
