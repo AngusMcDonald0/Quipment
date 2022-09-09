@@ -2,12 +2,12 @@
 //   background-color: #c3d0db78;
 // }
 .show-wrapper {
-  position: relative;
   height: calc(100vh - 55px);
   display: flex;
   align-items: center;
 
 }
+
 // element.style{
 //   height: 500px;
 //   width: 100%;
@@ -17,9 +17,11 @@
   display: flex;
   position: absolute;
   align-items: center;
-  top: 0;
+  top: -35px;
   left: 0;
-  color: rgb(150, 139, 139);
+  color: #968b8b;
+  width: 100%;
+  padding-bottom: 17px;
 
   i {
     font-size: 24px;
@@ -28,9 +30,7 @@
 
   p {
     line-height: initial;
-    position: static;
     opacity: 0.8;
-    top: auto;
     margin-left: 12px;
     transition: 0.28s all;
     margin-bottom: 0;
@@ -54,24 +54,16 @@
 }
 
 .card-product {
-  overflow: hidden;
+  position: relative;
   background: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   border-radius: 8px;
-}
 
-.card-product .show_photo {
-  object-fit: cover;
-  text-align: center;
-  float: left;
-  border-right: 8px solid #efefef;
-}
-
-
-.card-product {
-
+  img {
+    object-fit: cover;
+  }
 
   h1 {
     font-size: 24px;
@@ -100,7 +92,35 @@
     font-size: 12px
   }
 
+  p {
+    opacity: 0.8;
+    font-size: 14px;
+    // font-size: 13px;
+    // line-height: 1.3;
+    // opacity: .8;
+    // margin-bottom: 40px;
+    // margin-top: 8px;
+  }
 }
+
+.card-product::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #c8c6c6;
+  opacity: 0.5;
+  top: -5px;
+  border-radius: 5px;
+}
+
+.card-product .show_photo {
+  object-fit: cover;
+  text-align: center;
+  float: left;
+  border-right: 8px solid #efefef;
+}
+
 
 .card-product-infos {
   display: flex;
@@ -112,17 +132,6 @@
 }
 
 
-.card-product p {
-  position: inherit;
-  top: inherit;
-  opacity: 0.8;
-  font-size: 14px;
-  // font-size: 13px;
-  // line-height: 1.3;
-  // opacity: .8;
-  // margin-bottom: 40px;
-  // margin-top: 8px;
-}
 
 .card-product-infos button {
 
@@ -141,27 +150,9 @@
   text-align: center;
 
   &:hover {
-
     background: darken(white, 2%);
     border: 2px solid #aedaa6;
     color: #aedaa6;
     cursor: pointer;
-
-  }
-}
-
-
-// TO ADD IN APPROPRIATE PARTS
-.show_photo {
-  height: 500px;
-  width: 100%;
-
-  .carousel {
-    height: 100%;
-  }
-
-  img {
-    height: 100%;
-    object-fit: cover;
   }
 }
