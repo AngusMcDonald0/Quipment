@@ -62,11 +62,10 @@
 .card-trip h2 {
   font-size: 13px;
   font-weight: bold;
-  margin: 0;
 }
 
 .card-trip p {
-  font-size: 12px;
+  font-size: 11px;
   opacity: .7;
   margin: 0;
 }
@@ -75,7 +74,7 @@
   padding: 16px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: baseline;
   position: relative;
 }
 
