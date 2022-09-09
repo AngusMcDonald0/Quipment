@@ -38,16 +38,15 @@
         <div class="col-6 p-0">
           <div class="card-product-infos">
             <h2><%=@equipment.name.capitalize%></h2>
-            <h1>$<%=@equipment.price%></h1>
+            <h1>$<%=@equipment.price%> per week</h1>
             <p><%= @equipment.description %></p>
             <div class="container">
-              <div class="d-flex justify-content-center">
+              <%# <div class="d-flex justify-content-center"> %>
                 <% if policy(@equipment).edit? %>
                   <button><%= link_to "Edit", equipment_path(@equipment), class:"card-product-infos button" %></button>
                   <button><%= link_to "Delete", equipment_path(@equipment), class:"card-product-infos button" %></button>
-                <% end %>
-
                 <div class="container">
+                <%else%>
                   <h3>Book</h3>
                   <%= simple_form_for [@equipment, @booking] do |f| %>
                     <%= f.text_field :start_date, placeholder: "Start Date", data: { controller: "flatpickr" } %>
@@ -58,6 +57,7 @@
                     <br>
                     <%= f.submit %>
                   <% end %>
+                <%end%>
                 </div>
               </div>
             </div>
